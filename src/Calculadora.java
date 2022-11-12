@@ -1,8 +1,6 @@
 import java.util.Scanner;
 
 public class Calculadora {
-    public Calculadora() {
-    }
 
     public static void main(String[] args) {
         double valorUm;
@@ -28,6 +26,22 @@ public class Calculadora {
         valorUm = scann.nextDouble();
         System.out.println("Insira o segundo número: ");
         valorDois = scann.nextDouble();
+
+        /**
+         * CASO UTILIZE OS TERNÁRIOS PODE SER EXECUTADO DESTA FORMA, MAS NÃO É USUAL
+         resultado = indexOp == 0 ? resultado = valorUm + valorDois
+         : indexOp == 1 ? resultado = valorUm - valorDois
+         : indexOp == 2 ? resultado = valorUm * valorDois
+         : indexOp == 3 ? resultado = valorUm / valorDois
+         : 0;
+         */
+        /**
+         * CASO UTILIZE IF'S E ELSE'S
+         if(indexOp==0){resultado = valorUm + valorDois;}
+         else if(indexOp==1){resultado = valorUm + valorDois;}
+         else if(indexOp==2){resultado = valorUm * valorDois;}
+         else if(indexOp==3){resultado = valorUm / valorDois;}
+         */
         switch (indexOp) {
             case 0:
                 resultado = valorUm + valorDois;
@@ -41,7 +55,6 @@ public class Calculadora {
             case 3:
                 resultado = valorUm / valorDois;
         }
-
         System.out.println("Resultado da operação " + valorUm + " e " + valorDois + " = " + resultado);
         scann.close();
     }
